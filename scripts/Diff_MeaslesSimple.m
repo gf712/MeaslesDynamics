@@ -1,4 +1,4 @@
-function dPop=Diff_Measles(t,pop, parameter)
+function dPop=Diff_MeaslesSimple(t,pop, parameter)
 
 beta = parameter(1); 
 v = parameter(2); 

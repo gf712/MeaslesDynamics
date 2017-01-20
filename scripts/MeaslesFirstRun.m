@@ -1,9 +1,10 @@
 % parameters
-beta = 0.777;
-v = 0.777;
+beta = 0.3;
+v = 0.11;
 % maxTime corresponds to 936 weeks/18 years -> 1948 to 1966
 maxTime = 936;
-tspan = linspace(0,1,maxTime);
+%tspan = linspace(0,1,maxTime);
+tspan = [0 maxTime]
 
 % UK population
 N = 45000000;
@@ -24,12 +25,13 @@ I=pop(:,2);
 R=pop(:,3);
 
 %  Plots the graph
-T=[1:maxTime];
+T=t;
 plot(T,I,'-b');
 hold on;
 plot(T,R,'-r');
-% plot(T,S,'-k');
+%plot(T,S,'-k');
 ylabel('Number of People');
 xlabel('Time (weeks)');
 legend('Infected','Recovered')
+%legend('Infected','Recovered','Susceptible')
 hold off;

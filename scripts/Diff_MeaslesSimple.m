@@ -8,6 +8,6 @@ I=pop(2);
 R=pop(3);
 dPop=zeros(3,1);
 
-dPop(1) = - beta * S * I;
-dPop(2) = beta * I * S - v * I;
+dPop(1) = - beta * ((S * I) / N);
+dPop(2) = beta * ((S * I) / N) - v * I;
 dPop(3) = v * I;

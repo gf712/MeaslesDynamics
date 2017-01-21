@@ -1,0 +1,12 @@
+syms S(t) I(t) R(t)
+
+b = 0.2;
+v = 0.111;
+
+f = @(t,x) [-b * x(1) * x(2); b * x(1) * x(2) - v * x(1); v * x(1)];
+
+[t,xa] = ode45(f,[0 10000],[1000 0 0]);
+
+plot(t,xa(:,2))
+title('y(t)')
+xlabel('t'), ylabel('y')
